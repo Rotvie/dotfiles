@@ -16,6 +16,8 @@ export EDITOR='nvim'
 alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
+alias venvc='python3 -m venv env'
+alias venva='source env/bin/activate'
 
 # ----------------------
 # Git Aliases
@@ -25,3 +27,6 @@ alias gcm='git commit -m'
 alias gpsh='git push'
 alias gss='git status -s'
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
