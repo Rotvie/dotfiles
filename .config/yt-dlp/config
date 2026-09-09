@@ -1,0 +1,18 @@
+# yt-dlp configuration
+# ~/.config/yt-dlp/config
+
+-f bestvideo+bestaudio/best
+--merge-output-format mkv
+--no-mtime
+--embed-metadata
+--embed-thumbnail
+--embed-chapters
+--write-subs
+--write-auto-subs
+--embed-subs
+
+-P '~/Downloads'
+-o '%(uploader)s/%(title)s [%(id)s].%(ext)s'
+
+--playlist-reverse
+--no-abort-on-error

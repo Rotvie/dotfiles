@@ -1,8 +1,19 @@
 #! /bin/bash
 
-DOTFILES=(.gitconfig .zshrc)
+set -euo pipefail
 
-for dotfile in $(echo ${DOTFILES[*]});
-do
-    cp ~/dotfiles/$(echo $dotfile) ~/$(echo $dotfile)
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Paths relative to both $DOTFILES_DIR and $HOME. Nested paths are fine.
+DOTFILES=(
+    .gitconfig
+    .zshrc
+    .config/yt-dlp/config
+)
+
+for dotfile in "${DOTFILES[@]}"; do
+    src="$DOTFILES_DIR/$dotfile"
+    dst="$HOME/$dotfile"
+    mkdir -p "$(dirname "$dst")"
+    cp "$src" "$dst"
 done
