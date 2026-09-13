@@ -9,6 +9,8 @@ DOTFILES=(
     .gitconfig
     .zshrc
     .config/yt-dlp/config
+    .config/mpv/mpv.conf
+    .config/mpv/script-opts/subs2srs.conf
 )
 
 for dotfile in "${DOTFILES[@]}"; do

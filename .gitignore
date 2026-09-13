@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.DocumentRevisions-V100
+.TemporaryItems
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+Icon?
+
+# mpv: viewing history and the upstream addon.
+.config/mpv/watch_later/
+.config/mpv/scripts/
