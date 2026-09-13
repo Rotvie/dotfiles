@@ -16,3 +16,5 @@
 
 --playlist-reverse
 --no-abort-on-error
+
+--cookies-from-browser safari
